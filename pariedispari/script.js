@@ -12,14 +12,15 @@ function controllo(risultatoSomma) {
   // aggiungo una variabile boleana per il confronto
   let find = false;
   // creo la condizione di pari o dispari
-  if (sommaNumeri % 2 == 0) {
+  if (risultatoSomma % 2 == 0) {
     find = true;
     console.log('la somma è pari');
   } else {
     console.log('la somma è dispari');
   }
-  return controllo
+  return find;
 }
+
 // chiedo all'utente di scegliere pari o dispari
 let pariOdispari = prompt('scegli pari o dispari');
 console.log('prima condizione di vittoria: ', pariOdispari);
@@ -37,13 +38,29 @@ let sommaNumeri = numeroComputer + numeroUtente;
 console.log('somma numero utente e computer: ', sommaNumeri);
 
 // collego la mia funzione
-let risultatoSomma = controllo;
+// returnControll è come == a sommaNumeri, per questo lego la funzione controllo a sommaNumeri
+let returnControllo = controllo(sommaNumeri);
+
+// aggiungo una variabile boleana per il confronto
+// let find = false;
+
+// creo la condizione di pari o dispari
+// if (sommaNumeri % 2 == 0) {
+//   find = true;
+//   console.log('la somma è pari');
+// } else {
+//   console.log('la somma è dispari');
+// }
 
 // se ho scelto pari e la somma è pari e viceversa allora ho vinto
-if (find == true && pariOdispari == "pari") {
+// per la variabile boleana post funzione devo usare returnControll che il valore su cui sto verificando se è pari o dispari
+if (returnControllo == true && pariOdispari == 'pari') {
   console.log('hai vinto');
-} else if (find == false && pariOdispari == "dispari") {
+  alert('HAI VINTO');
+} else if (returnControllo == false && pariOdispari == 'dispari') {
   console.log('hai vinto');
+  alert('HAI VINTO');
 } else {
   console.log('hai perso');
+  alert('HAI PERSO');
 }
