@@ -41,17 +41,6 @@ console.log('somma numero utente e computer: ', sommaNumeri);
 // returnControll è come == a sommaNumeri, per questo lego la funzione controllo a sommaNumeri
 let returnControllo = controllo(sommaNumeri);
 
-// aggiungo una variabile boleana per il confronto
-// let find = false;
-
-// creo la condizione di pari o dispari
-// if (sommaNumeri % 2 == 0) {
-//   find = true;
-//   console.log('la somma è pari');
-// } else {
-//   console.log('la somma è dispari');
-// }
-
 // se ho scelto pari e la somma è pari e viceversa allora ho vinto
 // per la variabile boleana post funzione devo usare returnControll che il valore su cui sto verificando se è pari o dispari
 if (returnControllo == true && pariOdispari == 'pari') {
