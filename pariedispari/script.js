@@ -18,14 +18,6 @@ function controllo(risultatoSomma) {
   } else {
     console.log('la somma è dispari');
   }
-  // se ho scelto pari e la somma è pari e viceversa allora ho vinto
-  if (find == true && pariOdispari == 'pari') {
-    console.log('hai vinto');
-  } else if (find == false && pariOdispari == 'dispari') {
-    console.log('hai vinto');
-  } else {
-    console.log('hai perso');
-  }
   return controllo
 }
 // chiedo all'utente di scegliere pari o dispari
@@ -46,3 +38,12 @@ console.log('somma numero utente e computer: ', sommaNumeri);
 
 // collego la mia funzione
 let risultatoSomma = controllo;
+
+// se ho scelto pari e la somma è pari e viceversa allora ho vinto
+if (find == true && pariOdispari == "pari") {
+  console.log('hai vinto');
+} else if (find == false && pariOdispari == "dispari") {
+  console.log('hai vinto');
+} else {
+  console.log('hai perso');
+}
